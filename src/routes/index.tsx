@@ -142,7 +142,8 @@ function Hero() {
         className="absolute inset-0 h-full w-full object-cover"
       />
       {/* Subtiler dunkler Verlauf für Lesbarkeit */}
-      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/35 to-ink/10" />
+      <div className="absolute inset-0 bg-gradient-to-t from-ink/85 via-ink/45 to-ink/20" />
+      <div className="absolute inset-0 bg-ink/15 md:bg-ink/5" />
 
       <div className="relative z-10 mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6 md:pb-24">
         <p className="font-display text-xs font-semibold tracking-[0.3em] text-gold sm:text-sm">
