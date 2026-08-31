@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LegalLayout, Platzhalter } from "@/components/LegalLayout";
+import { LegalLayout } from "@/components/LegalLayout";
 
 export const Route = createFileRoute("/impressum")({
   head: () => ({
@@ -25,25 +25,31 @@ function Impressum() {
   return (
     <LegalLayout title="Impressum" intro="Angaben gemäß § 5 DDG (ehemals § 5 TMG).">
       <h2>Veranstalter / Diensteanbieter</h2>
-      <Platzhalter label="Name des Veranstalters bzw. der verantwortlichen Organisation" />
-      <Platzhalter label="Straße und Hausnummer" />
-      <Platzhalter label="PLZ und Ort" />
+      <p>
+        Jan-Philipp Struck
+        <br />
+        Ballonläufer / Hammer Backyard Ultra
+        <br />
+        Brüggenkampstr. 10
+        <br />
+        59077 Hamm
+        <br />
+        Deutschland
+      </p>
 
       <h2>Kontakt</h2>
-      <Platzhalter label="E-Mail-Adresse" />
-      <Platzhalter label="Telefonnummer (optional)" />
-
-      <h2>Vertreten durch</h2>
-      <Platzhalter label="Vertretungsberechtigte Person(en)" />
-
-      <h2>Registereintrag / Rechtsform</h2>
-      <Platzhalter label="Rechtsform, ggf. Vereinsregister und Registernummer, Registergericht" />
-
-      <h2>Umsatzsteuer-Identifikationsnummer</h2>
-      <Platzhalter label="USt-IdNr. gemäß § 27 a UStG, sofern vorhanden" />
+      <p>
+        E-Mail: <a href="mailto:janphilippstruck@gmx.de">janphilippstruck@gmx.de</a>
+      </p>
 
       <h2>Verantwortlich für den Inhalt nach § 18 Abs. 2 MStV</h2>
-      <Platzhalter label="Name und Anschrift der verantwortlichen Person" />
+      <p>
+        Jan-Philipp Struck
+        <br />
+        Brüggenkampstr. 10
+        <br />
+        59077 Hamm
+      </p>
 
       <h2>Bildnachweise</h2>
       <p>
