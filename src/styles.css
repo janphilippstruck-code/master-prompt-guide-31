@@ -103,6 +103,17 @@
     background-position: 0 0, 8px 11px;
   }
 
+  .legal-content h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    font-size: 1.125rem;
+    margin-top: 2rem;
+    color: var(--foreground);
+  }
+
   .reveal {
     opacity: 0;
     transform: translateY(18px);
@@ -113,7 +124,18 @@
     transform: none;
   }
   @media (prefers-reduced-motion: reduce) {
-    .reveal {
+    .legal-content h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    line-height: 1.25;
+    font-size: 1.125rem;
+    margin-top: 2rem;
+    color: var(--foreground);
+  }
+
+  .reveal {
       opacity: 1;
       transform: none;
       transition: none;
