@@ -99,17 +99,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Jede Stunde schlägt die Glocke. 17. April 2027 · Selbachpark Hamm.",
       },
       { property: "og:type", content: "website" },
-      {
-        property: "og:image",
-        content:
-          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
-      },
+      { property: "og:site_name", content: "Hammer Backyard Ultra" },
+      { property: "og:locale", content: "de_DE" },
       { name: "twitter:card", content: "summary_large_image" },
+
     ],
     links: [
       {
