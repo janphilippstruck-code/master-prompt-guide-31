@@ -18,6 +18,10 @@ export const Route = createFileRoute("/datenschutz")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
     ],
+    links: [
+      { rel: "canonical", href: "https://hammerbackyard.xn--ballonlufer-r8a.de/datenschutz" },
+    ],
+
   }),
   component: Datenschutz,
 });

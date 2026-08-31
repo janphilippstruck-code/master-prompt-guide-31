@@ -17,6 +17,10 @@ export const Route = createFileRoute("/impressum")({
       { property: "og:type", content: "article" },
       { name: "twitter:card", content: "summary" },
     ],
+    links: [
+      { rel: "canonical", href: "https://hammerbackyard.xn--ballonlufer-r8a.de/impressum" },
+    ],
+
   }),
   component: Impressum,
 });
