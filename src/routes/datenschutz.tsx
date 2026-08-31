@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { LegalLayout, Platzhalter } from "@/components/LegalLayout";
+import { LegalLayout } from "@/components/LegalLayout";
 
 export const Route = createFileRoute("/datenschutz")({
   head: () => ({
@@ -29,52 +29,67 @@ function Datenschutz() {
       intro="Informationen zur Verarbeitung personenbezogener Daten beim Besuch dieser Website."
     >
       <h2>1. Verantwortliche Stelle</h2>
-      <Platzhalter label="Name, Anschrift und E-Mail-Adresse der verantwortlichen Stelle" />
+      <p>
+        Jan-Philipp Struck
+        <br />
+        Brüggenkampstr. 10
+        <br />
+        59077 Hamm
+        <br />
+        Deutschland
+        <br />
+        E-Mail: <a href="mailto:janphilippstruck@gmx.de">janphilippstruck@gmx.de</a>
+      </p>
 
-      <h2>2. Datenschutzbeauftragter</h2>
-      <Platzhalter label="Kontaktdaten des Datenschutzbeauftragten, sofern benannt" />
-
-      <h2>3. Aufruf der Website / Server-Logfiles</h2>
+      <h2>2. Aufruf der Website / Server-Logfiles</h2>
       <p>
         Beim Aufruf dieser Website werden durch den Hosting-Dienstleister technisch notwendige Daten
         verarbeitet, insbesondere IP-Adresse, Datum und Uhrzeit des Zugriffs, aufgerufene Seite, übertragene
-        Datenmenge sowie Browser- und Betriebssystemangaben. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
-        (berechtigtes Interesse am sicheren und stabilen Betrieb der Website).
+        Datenmenge sowie Browser- und Betriebssystemangaben. Diese Daten sind für die Auslieferung und den
+        sicheren Betrieb der Website erforderlich und werden nur für einen kurzen Zeitraum gespeichert.
+        Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse am sicheren und stabilen
+        Betrieb der Website).
       </p>
-      <Platzhalter label="Name und Anschrift des Hosting-Dienstleisters sowie Speicherdauer der Logfiles" />
 
-      <h2>4. Cookies und Reichweitenmessung</h2>
+      <h2>3. Cookies, Tracking und Reichweitenmessung</h2>
       <p>
-        Diese Website setzt keine Cookies zu Marketing- oder Trackingzwecken ein. Sollten künftig
-        Analyse-Werkzeuge eingesetzt werden, wird dieser Abschnitt entsprechend ergänzt.
+        Diese Website setzt keine Cookies zu Marketing-, Analyse- oder Trackingzwecken ein. Es findet keine
+        Reichweitenmessung und kein Newsletter-Versand statt.
       </p>
 
-      <h2>5. Eingebundene Schriftarten</h2>
+      <h2>4. Schriftarten</h2>
       <p>
-        Für die Darstellung werden Web-Schriftarten (Oswald, Barlow) von Google Fonts geladen. Dabei wird die
-        IP-Adresse an Google übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.
+        Die verwendeten Schriftarten werden lokal von diesem Webserver ausgeliefert. Es besteht dabei keine
+        Verbindung zu Servern Dritter und es werden keine Daten an externe Anbieter übertragen.
       </p>
 
-      <h2>6. Kontaktaufnahme</h2>
+      <h2>5. Kontaktaufnahme per E-Mail</h2>
       <p>
         Nehmen Sie per E-Mail Kontakt auf, verarbeiten wir Ihre Angaben ausschließlich zur Bearbeitung Ihrer
-        Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO.
+        Anfrage. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Die Daten werden gelöscht, sobald
+        sie für den Zweck der Verarbeitung nicht mehr erforderlich sind.
       </p>
 
-      <h2>7. Anmeldung zur Veranstaltung</h2>
+      <h2>6. Anmeldung zur Veranstaltung</h2>
       <p>
-        Die Anmeldung ist derzeit nicht geöffnet. Sobald ein Anmeldeverfahren bereitsteht, werden die dabei
-        erhobenen Daten, deren Zweck, Empfänger und Speicherdauer an dieser Stelle beschrieben.
+        Die Anmeldung zum Hammer Backyard Ultra ist derzeit noch nicht geöffnet. Über diese Website werden
+        aktuell keine Anmeldedaten erhoben. Sobald ein Anmeldeverfahren bereitsteht, informieren wir an dieser
+        Stelle über die dabei erhobenen Daten, deren Zweck, Empfänger und Speicherdauer.
       </p>
-      <Platzhalter label="Angaben zum eingesetzten Anmelde- bzw. Zeitmessdienstleister" />
 
-      <h2>8. Ihre Rechte</h2>
+      <h2>7. Ihre Rechte</h2>
       <p>
         Sie haben das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung,
-        Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung. Zudem steht Ihnen ein Beschwerderecht
-        bei einer Datenschutz-Aufsichtsbehörde zu.
+        Datenübertragbarkeit sowie Widerspruch gegen die Verarbeitung Ihrer personenbezogenen Daten. Wenden
+        Sie sich dazu an die oben genannte verantwortliche Stelle.
       </p>
-      <Platzhalter label="Zuständige Aufsichtsbehörde" />
+
+      <h2>8. Beschwerderecht bei der Aufsichtsbehörde</h2>
+      <p>
+        Ihnen steht ein Beschwerderecht bei einer Datenschutz-Aufsichtsbehörde zu. Zuständig ist die
+        Landesbeauftragte für Datenschutz und Informationsfreiheit Nordrhein-Westfalen, Kavalleriestr. 2–4,
+        40213 Düsseldorf.
+      </p>
     </LegalLayout>
   );
 }
