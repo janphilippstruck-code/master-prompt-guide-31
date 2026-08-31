@@ -247,13 +247,13 @@ function Strecke() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:py-28">
         <div className="grid items-start gap-9 md:grid-cols-2 md:gap-16">
           <div>
-            <p className="reveal font-display text-xs font-semibold tracking-[0.3em] text-accent">DIE RUNDE</p>
+            <p className="reveal font-display text-xs font-semibold tracking-[0.3em] text-accent">STRECKE</p>
             <h2 className="reveal font-display mt-4 text-3xl font-bold uppercase leading-[1.14] sm:text-4xl sm:leading-[1.08] md:text-5xl">
-              Eine Runde,
+              6,706 Kilometer,
               <br />
-              die nie ganz
+              die du bald
               <br />
-              gleich bleibt.
+              auswendig kennst.
             </h2>
             <div className="reveal mt-6 space-y-4 text-base leading-relaxed text-foreground/80 sm:text-lg">
               <p>
@@ -307,7 +307,7 @@ function Basecamp() {
         </div>
         <div>
           <p className="reveal font-display text-xs font-semibold tracking-[0.3em] text-accent">
-            ZWISCHEN DEN RUNDEN
+            BASECAMP
           </p>
           <h2 className="reveal font-display mt-4 text-3xl font-bold uppercase leading-[1.14] sm:text-4xl sm:leading-[1.08] md:text-5xl">
             Dein Platz
