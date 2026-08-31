@@ -89,6 +89,16 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Jede Stunde schlägt die Glocke. 17. April 2027 · Selbachpark Hamm.",
       },
       { property: "og:type", content: "website" },
+      {
+        property: "og:image",
+        content:
+          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
+      },
+      {
+        name: "twitter:image",
+        content:
+          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
+      },
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
@@ -113,7 +123,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="de">
       <head>
         <HeadContent />
       </head>
