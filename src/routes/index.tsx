@@ -6,8 +6,39 @@ import glockeAsset from "@/assets/glocke.asset.json";
 import heroAsset from "@/assets/hero.asset.json";
 import karteAsset from "@/assets/karte.asset.json";
 import basecampAsset from "@/assets/basecamp.asset.json";
+import ballonlaeuferLogo from "@/assets/ballonlaeufer-logo.asset.json";
 
-const OG_IMAGE = `https://cozy-instruction-api.lovable.app${heroAsset.url}`;
+const SITE_URL = "https://hammerbackyard.xn--ballonlufer-r8a.de/";
+const OG_IMAGE = "https://hammerbackyard.xn--ballonlufer-r8a.de/social/hammer-backyard-og.jpg";
+const BALLONLAEUFER_URL = "https://xn--ballonlufer-r8a.de/";
+
+const EVENT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Hammer Backyard Ultra 2027",
+  startDate: "2027-04-17T10:00:00+02:00",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  description:
+    "Der Hammer Backyard Ultra kommt nach Hamm. 6,706 Kilometer. Jede Stunde eine neue Runde. Start am 17. April 2027 im Selbachpark.",
+  image: [OG_IMAGE],
+  location: {
+    "@type": "Place",
+    name: "Selbachpark Hamm",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Hamm",
+      addressCountry: "DE",
+    },
+  },
+  url: SITE_URL,
+  maximumAttendeeCapacity: 150,
+  organizer: {
+    "@type": "Organization",
+    name: "Ballonläufer",
+    url: BALLONLAEUFER_URL,
+  },
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,13 +55,24 @@ export const Route = createFileRoute("/")({
         content: "Jede Stunde schlägt die Glocke. 17. April 2027 · Selbachpark Hamm.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Hammer Backyard Ultra" },
+      { property: "og:locale", content: "de_DE" },
+      { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE },
     ],
+    links: [{ rel: "canonical", href: SITE_URL }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(EVENT_JSON_LD),
+      },
+    ],
   }),
   component: Index,
 });
+
 
 /* ---------- Scroll-Reveal (sehr dezent) ---------- */
 function useReveal() {
@@ -530,25 +572,41 @@ function Footer() {
   return (
     <footer className="border-t border-ink-foreground/10 bg-ink py-10 text-ink-foreground texture-paper-dark">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6 md:flex-row md:justify-between md:text-left">
-        <div>
+        <div className="flex flex-col items-center gap-4 md:items-start">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em]">Hammer Backyard Ultra</p>
-          <p className="mt-2 text-xs text-ink-foreground/50">Eine Veranstaltung aus dem Ballonläufer-Umfeld.</p>
+          <a
+            href={BALLONLAEUFER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex min-h-12 items-center gap-3 rounded-md border border-ink-foreground/15 px-4 py-2 transition-colors hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            <img
+              src={ballonlaeuferLogo.url}
+              alt="Ballonläufer Logo"
+              className="h-8 w-auto"
+              loading="lazy"
+            />
+            <span className="text-xs font-medium text-ink-foreground/80 underline underline-offset-4 transition-colors group-hover:text-gold">
+              Eine Veranstaltung von Ballonläufer ↗
+            </span>
+          </a>
         </div>
         <div className="flex flex-col items-center gap-3 md:items-end">
           <div className="flex gap-6">
             <Link
               to="/impressum"
-              className="font-display text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 transition-colors hover:text-gold"
+              className="font-display inline-flex min-h-12 items-center text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               IMPRESSUM
             </Link>
             <Link
               to="/datenschutz"
-              className="font-display text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 transition-colors hover:text-gold"
+              className="font-display inline-flex min-h-12 items-center text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               DATENSCHUTZ
             </Link>
           </div>
+
           <p className="text-xs text-ink-foreground/40">© {year} Hammer Backyard Ultra</p>
         </div>
       </div>

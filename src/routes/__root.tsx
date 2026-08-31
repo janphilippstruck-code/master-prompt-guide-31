@@ -23,17 +23,19 @@ function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
+        <h1 className="font-display text-7xl font-bold text-foreground">404</h1>
+        <h2 className="font-display mt-4 text-xl font-semibold uppercase tracking-[0.12em] text-foreground">
+          Seite nicht gefunden
+        </h2>
         <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+          Die gesuchte Seite existiert nicht oder wurde verschoben.
         </p>
         <div className="mt-6">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="font-display inline-flex min-h-12 items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold tracking-[0.15em] text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Go home
+            ZUR STARTSEITE
           </Link>
         </div>
       </div>
@@ -51,33 +53,34 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
       <div className="max-w-md text-center">
-        <h1 className="text-xl font-semibold tracking-tight text-foreground">
-          This page didn't load
+        <h1 className="font-display text-xl font-semibold uppercase tracking-[0.12em] text-foreground">
+          Diese Seite konnte nicht geladen werden.
         </h1>
         <p className="mt-2 text-sm text-muted-foreground">
-          Something went wrong on our end. You can try refreshing or head back home.
+          Beim Laden ist etwas schiefgelaufen. Bitte versuche es erneut oder gehe zur Startseite.
         </p>
-        <div className="mt-6 flex flex-wrap justify-center gap-2">
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
           <button
             onClick={() => {
               router.invalidate();
               reset();
             }}
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="font-display inline-flex min-h-12 items-center justify-center rounded-md bg-primary px-5 py-3 text-sm font-semibold tracking-[0.15em] text-primary-foreground transition-colors hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Try again
+            ERNEUT VERSUCHEN
           </button>
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium text-foreground transition-colors hover:bg-accent"
+            className="font-display inline-flex min-h-12 items-center justify-center rounded-md border border-input bg-background px-5 py-3 text-sm font-semibold tracking-[0.15em] text-foreground transition-colors hover:bg-muted focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
           >
-            Go home
+            ZUR STARTSEITE
           </a>
         </div>
       </div>
     </div>
   );
 }
+
 
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
@@ -96,17 +99,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         content: "Jede Stunde schlägt die Glocke. 17. April 2027 · Selbachpark Hamm.",
       },
       { property: "og:type", content: "website" },
-      {
-        property: "og:image",
-        content:
-          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
-      },
-      {
-        name: "twitter:image",
-        content:
-          "https://cozy-instruction-api.lovable.app/__l5e/assets-v1/134e6142-354c-4664-80a6-976f6633cb2a/hero-selbachpark.jpeg",
-      },
+      { property: "og:site_name", content: "Hammer Backyard Ultra" },
+      { property: "og:locale", content: "de_DE" },
       { name: "twitter:card", content: "summary_large_image" },
+
     ],
     links: [
       {

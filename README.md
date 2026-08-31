@@ -1,26 +1,32 @@
-# Master Prompt Guide (31)
+# Hammer Backyard Ultra
 
-der Auftrag steht im masterprompt 
+Landingpage zum **Hammer Backyard Ultra** am 17. April 2027 im Selbachpark Hamm.
 
-halte dich bitte exakt daran
+- Live: https://hammerbackyard.xn--ballonlufer-r8a.de/ (sichtbar: https://hammerbackyard.ballonläufer.de/)
+- Dachmarke: https://xn--ballonlufer-r8a.de/
 
-This project was built with [Lovable](https://lovable.dev).
+## Eckdaten
 
-## Build with Lovable
+- 17. April 2027, Start 10:00 Uhr
+- Selbachpark Hamm
+- 6,706 km pro Runde, jede Stunde eine neue Runde, Open End
+- maximal 150 Teilnehmende
+- Early Bird 59 €, regulär 69 €
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/88dcc89e-f80c-4197-b769-17ea40b1d69b).
+## Technik
 
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
+TanStack Start (React 19, Vite 7) mit Tailwind CSS v4. Schriften (Oswald, Barlow) sind lokal
+gebündelt, es werden keine externen Font-CDNs geladen.
 
-## Development
+Seiten: `/` (Landingpage), `/impressum`, `/datenschutz`.
+Statische Dateien: `public/robots.txt`, `public/sitemap.xml`, `public/social/hammer-backyard-og.jpg`.
 
-Prefer working locally? You need Node.js and npm — [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating).
+## Entwicklung
 
 ```sh
-git clone <this-repository-url>
-cd <repository-name>
-npm i
+npm install
 npm run dev
 ```
+
+Weiterentwickelt wird das Projekt im [Lovable-Editor](https://lovable.dev/projects/88dcc89e-f80c-4197-b769-17ea40b1d69b);
+Änderungen synchronisieren sich mit diesem Repository.
