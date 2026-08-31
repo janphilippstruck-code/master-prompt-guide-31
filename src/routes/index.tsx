@@ -572,25 +572,41 @@ function Footer() {
   return (
     <footer className="border-t border-ink-foreground/10 bg-ink py-10 text-ink-foreground texture-paper-dark">
       <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 px-4 text-center sm:px-6 md:flex-row md:justify-between md:text-left">
-        <div>
+        <div className="flex flex-col items-center gap-4 md:items-start">
           <p className="font-display text-sm font-semibold uppercase tracking-[0.2em]">Hammer Backyard Ultra</p>
-          <p className="mt-2 text-xs text-ink-foreground/50">Eine Veranstaltung aus dem Ballonläufer-Umfeld.</p>
+          <a
+            href={BALLONLAEUFER_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group inline-flex min-h-12 items-center gap-3 rounded-md border border-ink-foreground/15 px-4 py-2 transition-colors hover:border-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
+          >
+            <img
+              src={ballonlaeuferLogo.url}
+              alt="Ballonläufer Logo"
+              className="h-8 w-auto"
+              loading="lazy"
+            />
+            <span className="text-xs font-medium text-ink-foreground/80 underline underline-offset-4 transition-colors group-hover:text-gold">
+              Eine Veranstaltung von Ballonläufer ↗
+            </span>
+          </a>
         </div>
         <div className="flex flex-col items-center gap-3 md:items-end">
           <div className="flex gap-6">
             <Link
               to="/impressum"
-              className="font-display text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 transition-colors hover:text-gold"
+              className="font-display inline-flex min-h-12 items-center text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               IMPRESSUM
             </Link>
             <Link
               to="/datenschutz"
-              className="font-display text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 transition-colors hover:text-gold"
+              className="font-display inline-flex min-h-12 items-center text-xs font-semibold tracking-[0.2em] text-ink-foreground/70 underline underline-offset-4 transition-colors hover:text-gold focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
             >
               DATENSCHUTZ
             </Link>
           </div>
+
           <p className="text-xs text-ink-foreground/40">© {year} Hammer Backyard Ultra</p>
         </div>
       </div>
