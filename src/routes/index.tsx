@@ -6,8 +6,39 @@ import glockeAsset from "@/assets/glocke.asset.json";
 import heroAsset from "@/assets/hero.asset.json";
 import karteAsset from "@/assets/karte.asset.json";
 import basecampAsset from "@/assets/basecamp.asset.json";
+import ballonlaeuferLogo from "@/assets/ballonlaeufer-logo.asset.json";
 
-const OG_IMAGE = `https://cozy-instruction-api.lovable.app${heroAsset.url}`;
+const SITE_URL = "https://hammerbackyard.xn--ballonlufer-r8a.de/";
+const OG_IMAGE = "https://hammerbackyard.xn--ballonlufer-r8a.de/social/hammer-backyard-og.jpg";
+const BALLONLAEUFER_URL = "https://xn--ballonlufer-r8a.de/";
+
+const EVENT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Event",
+  name: "Hammer Backyard Ultra 2027",
+  startDate: "2027-04-17T10:00:00+02:00",
+  eventStatus: "https://schema.org/EventScheduled",
+  eventAttendanceMode: "https://schema.org/OfflineEventAttendanceMode",
+  description:
+    "Der Hammer Backyard Ultra kommt nach Hamm. 6,706 Kilometer. Jede Stunde eine neue Runde. Start am 17. April 2027 im Selbachpark.",
+  image: [OG_IMAGE],
+  location: {
+    "@type": "Place",
+    name: "Selbachpark Hamm",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Hamm",
+      addressCountry: "DE",
+    },
+  },
+  url: SITE_URL,
+  maximumAttendeeCapacity: 150,
+  organizer: {
+    "@type": "Organization",
+    name: "Ballonläufer",
+    url: BALLONLAEUFER_URL,
+  },
+};
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -24,13 +55,24 @@ export const Route = createFileRoute("/")({
         content: "Jede Stunde schlägt die Glocke. 17. April 2027 · Selbachpark Hamm.",
       },
       { property: "og:type", content: "website" },
+      { property: "og:site_name", content: "Hammer Backyard Ultra" },
+      { property: "og:locale", content: "de_DE" },
+      { property: "og:url", content: SITE_URL },
       { property: "og:image", content: OG_IMAGE },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:image", content: OG_IMAGE },
     ],
+    links: [{ rel: "canonical", href: SITE_URL }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify(EVENT_JSON_LD),
+      },
+    ],
   }),
   component: Index,
 });
+
 
 /* ---------- Scroll-Reveal (sehr dezent) ---------- */
 function useReveal() {
