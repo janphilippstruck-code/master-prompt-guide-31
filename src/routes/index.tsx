@@ -136,7 +136,7 @@ function Header() {
             onClick={() => scrollToId("anmeldung")}
             className="font-display rounded-md border border-accent px-5 py-2.5 text-sm font-semibold tracking-[0.18em] text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
           >
-            ANMELDUNG FOLGT
+            ANMELDEINFOS
           </button>
         </nav>
 
@@ -174,7 +174,7 @@ function Header() {
               }}
               className="font-display mt-2 rounded-md border border-accent px-3 py-3 text-center text-base font-semibold tracking-[0.18em] text-accent"
             >
-              ANMELDUNG FOLGT
+              ANMELDEINFOS
             </button>
           </div>
         </nav>
@@ -248,6 +248,11 @@ function Eckdaten() {
             <p className="mt-1 text-[11px] font-semibold tracking-[0.25em] text-muted-foreground">{f.label}</p>
           </div>
         ))}
+      </div>
+      <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 md:pb-10">
+        <p className="reveal border-t border-border pt-5 text-center text-xs leading-relaxed text-muted-foreground sm:text-sm md:text-left">
+          Die Veranstaltung befindet sich noch in Planung. Die Durchführung steht unter dem Vorbehalt der erforderlichen behördlichen Genehmigungen und Abstimmungen.
+        </p>
       </div>
     </section>
   );
@@ -448,7 +453,7 @@ function Zielgruppe() {
 const FAQ_ITEMS = [
   {
     q: "Wann öffnet die Anmeldung und was kostet der Start?",
-    a: "Die Anmeldung öffnet in Kürze. Die ersten 30 Startplätze gibt es zum Early-Bird-Preis von 59 €, anschließend beträgt das reguläre Startgeld 69 €.",
+    a: "Die Anmeldung ist derzeit noch nicht geöffnet. Der Anmeldestart ist voraussichtlich für den 1. Dezember 2026 vorgesehen. Den genauen Zeitpunkt bestätigen wir rechtzeitig. Die ersten 30 Startplätze gibt es zum Early-Bird-Preis von 59 €, anschließend beträgt das reguläre Startgeld 69 €.",
   },
   {
     q: "Wie viele Startplätze gibt es?",
@@ -560,7 +565,12 @@ function FinalCta() {
             ANMELDUNG FOLGT
           </span>
         </div>
-        <p className="reveal mt-6 text-xs text-ink-foreground/50">Weitere Informationen folgen in Kürze.</p>
+        <p className="reveal font-display mt-6 text-base font-semibold tracking-[0.08em] text-ink-foreground sm:text-lg">
+          Anmeldung voraussichtlich ab 1. Dezember 2026
+        </p>
+        <p className="reveal mt-2 text-xs text-ink-foreground/60">
+          Den genauen Anmeldestart geben wir rechtzeitig bekannt.
+        </p>
       </div>
     </section>
   );
