@@ -136,7 +136,7 @@ function Header() {
             onClick={() => scrollToId("anmeldung")}
             className="font-display rounded-md border border-accent px-5 py-2.5 text-sm font-semibold tracking-[0.18em] text-accent transition-colors hover:bg-accent hover:text-accent-foreground"
           >
-            ANMELDUNG FOLGT
+            ANMELDEINFOS
           </button>
         </nav>
 
@@ -174,7 +174,7 @@ function Header() {
               }}
               className="font-display mt-2 rounded-md border border-accent px-3 py-3 text-center text-base font-semibold tracking-[0.18em] text-accent"
             >
-              ANMELDUNG FOLGT
+              ANMELDEINFOS
             </button>
           </div>
         </nav>
