@@ -249,6 +249,11 @@ function Eckdaten() {
           </div>
         ))}
       </div>
+      <div className="mx-auto max-w-6xl px-4 pb-8 sm:px-6 md:pb-10">
+        <p className="reveal border-t border-border pt-5 text-center text-xs leading-relaxed text-muted-foreground sm:text-sm md:text-left">
+          Die Veranstaltung befindet sich noch in Planung. Die Durchführung steht unter dem Vorbehalt der erforderlichen behördlichen Genehmigungen und Abstimmungen.
+        </p>
+      </div>
     </section>
   );
 }
@@ -448,7 +453,7 @@ function Zielgruppe() {
 const FAQ_ITEMS = [
   {
     q: "Wann öffnet die Anmeldung und was kostet der Start?",
-    a: "Die Anmeldung öffnet in Kürze. Die ersten 30 Startplätze gibt es zum Early-Bird-Preis von 59 €, anschließend beträgt das reguläre Startgeld 69 €.",
+    a: "Die Anmeldung ist derzeit noch nicht geöffnet. Der Anmeldestart ist voraussichtlich für den 1. Dezember 2026 vorgesehen. Den genauen Zeitpunkt bestätigen wir rechtzeitig. Die ersten 30 Startplätze gibt es zum Early-Bird-Preis von 59 €, anschließend beträgt das reguläre Startgeld 69 €.",
   },
   {
     q: "Wie viele Startplätze gibt es?",
@@ -560,7 +565,12 @@ function FinalCta() {
             ANMELDUNG FOLGT
           </span>
         </div>
-        <p className="reveal mt-6 text-xs text-ink-foreground/50">Weitere Informationen folgen in Kürze.</p>
+        <p className="reveal font-display mt-6 text-base font-semibold tracking-[0.08em] text-ink-foreground sm:text-lg">
+          Anmeldung voraussichtlich ab 1. Dezember 2026
+        </p>
+        <p className="reveal mt-2 text-xs text-ink-foreground/60">
+          Den genauen Anmeldestart geben wir rechtzeitig bekannt.
+        </p>
       </div>
     </section>
   );
